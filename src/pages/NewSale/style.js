@@ -2,18 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    margin: 0,
+    margin: "0px 10px",
     padding: 0,
   },
 
   box: {
     minWidth: "300px",
-    margin: "10px",
+    maxWidth: "600px",
+    margin: "10px auto",
     marginTop: "50px",
     backgroundColor: "white",
     animation: `$animationForm 1500ms ${theme.transitions.easing.easeInOut}`,
     "@media (min-width:780px)": {
-      maxWidth: "600px",
       margin: "50px auto",
     },
   },

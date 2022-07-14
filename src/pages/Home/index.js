@@ -94,7 +94,7 @@ const Home = () => {
           </Grid>
 
           <Grid item className={classes.gridItemThree}>
-            <Box>
+            <Box style={{ width: "250px" }}>
               {saleProduction.map((saleProduction, index) => (
                 <Box
                   key={saleProduction.sale_uuid}
@@ -128,7 +128,7 @@ const Home = () => {
               ))}
             </Box>
 
-            <Box>
+            <Box style={{ width: "250px" }}>
               {saleCompleted.map((saleCompleted, index) => (
                 <Box
                   key={saleCompleted.sale_uuid}
@@ -162,7 +162,7 @@ const Home = () => {
               ))}
             </Box>
 
-            <Box>
+            <Box style={{ width: "250px" }}>
               {saleCanceled.map((saleCanceled, index) => (
                 <Box
                   key={saleCanceled.sale_uuid}
@@ -173,13 +173,7 @@ const Home = () => {
                       : { background: "white" }
                   }
                 >
-                  <Typography
-                    variant="body1"
-                    className={classes.typographyOne}
-                    onClick={() => {
-                      openAndCloseModal(saleCanceled.sale_uuid);
-                    }}
-                  >
+                  <Typography variant="body1" className={classes.typographyOne}>
                     Pedido {index + 1}
                   </Typography>
                   <Typography variant="body1">{saleCanceled.name}</Typography>
